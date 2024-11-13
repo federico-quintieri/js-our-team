@@ -6,6 +6,7 @@
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 .container {
@@ -14,23 +15,90 @@ img {
   text-align: center;
 }
 
+.container h1 {
+  padding-top: 1rem;
+}
+
+.container p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: flex-start;
+  gap: 16px;
 }
 
 .card {
-  display: flex;
   color: white;
   background-color: rgb(2, 2, 22);
   text-align: left;
+  width: calc(100% / 3 - 16px);
+  min-width: 200px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .card a {
   text-decoration: none;
   color: aqua;
 }
-.cardText{
-    padding: 20px;
+.cardText {
+  padding: 20px;
+}
+
+.spanNome {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.spanRole {
+  font-size: 1rem;
+  color: gray;
+}
+
+form {
+  padding: 30px 0 30px 0;
+}
+
+label{
+  display: inline-block;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  font-size: 1.5rem;
+}
+form button{
+  margin-top: 10px;
+  padding: 5px;
+  background-color: bisque;
+  border-radius: 10%;
+  border:0;
+  box-shadow: 0px 0px 5px 1px black;
+}
+
+form input {
+  border-radius: 5px;
+  height: 25px;
+  border: 1px solid black;
+}
+
+/* Card responsive */
+
+@media (max-width: 768px) {
+  /* 2 colonne su tablet */
+  .card {
+    width: calc(100% / 2 - 16px);
+  }
+}
+
+@media (max-width: 480px) {
+  /* 1 colonna su schermi piccoli */
+  .card {
+    width: 100%;
+  }
 }
