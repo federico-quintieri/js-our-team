@@ -1,9 +1,35 @@
-*{
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  color: white;
+  background-color: rgb(2, 2, 22);
+  text-align: left;
+}
+
+.card a {
+  text-decoration: none;
+  color: aqua;
+}
+.cardText{
+    padding: 20px;
 }
