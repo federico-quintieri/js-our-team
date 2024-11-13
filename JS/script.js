@@ -56,7 +56,7 @@ for (let i = 0; i < teamMembers.length; i++) {
   // Compongo la stringa HTML
   const stringaElementoHtml = `
   <div class="card">
-            <div><img src="./${img}" alt="" /></div>
+            <div class="cardImg"><img src="./${img}" alt="" /></div>
             <div class="cardText">
               <span class="spanNome">${name}</span>
               <p class="spanRole">${role}</p>
@@ -74,7 +74,7 @@ const aggiungoCard = (p_nome, p_ruolo, p_mail, p_img) => {
 
   const stringaElementoHtml = `
   <div class="card">
-            <div><img src="./img/D4c_sbr69.jpg" alt="" /></div>
+            <div class="cardImg"><img src="./img/D4c_sbr69.jpg" alt="" /></div>
             <div class="cardText">
               <span class="spanNome">${p_nome}</span>
               <p class="spanRole">${p_ruolo}</p>

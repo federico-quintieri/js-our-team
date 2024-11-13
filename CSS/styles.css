@@ -33,24 +33,33 @@ img {
 
 .card {
   color: white;
+  display: flex;
   background-color: rgb(2, 2, 22);
   text-align: left;
   width: calc(100% / 3 - 16px);
-  min-width: 200px;
+  height: 140px;
+  width: 100%;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+.card img{
+  height: 100%;
+  object-fit: cover;
 }
 
 .card a {
+  display: block;
   text-decoration: none;
   color: aqua;
+  font-size: 0.9rem;
 }
 .cardText {
+  width: 60%;
   padding: 20px;
+}
+
+.cardImg{
+  width: 40%;
+  padding: 1px;
 }
 
 .spanNome {
@@ -66,18 +75,18 @@ form {
   padding: 30px 0 30px 0;
 }
 
-label{
+label {
   display: inline-block;
   padding-bottom: 5px;
   padding-top: 20px;
   font-size: 1.5rem;
 }
-form button{
+form button {
   margin-top: 10px;
   padding: 5px;
   background-color: bisque;
   border-radius: 10%;
-  border:0;
+  border: 0;
   box-shadow: 0px 0px 5px 1px black;
 }
 
@@ -89,16 +98,16 @@ form input {
 
 /* Card responsive */
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   /* 2 colonne su tablet */
   .card {
     width: calc(100% / 2 - 16px);
   }
 }
 
-@media (max-width: 480px) {
-  /* 1 colonna su schermi piccoli */
+@media (min-width: 1024px) {
+  /* 2 colonne su tablet */
   .card {
-    width: 100%;
+    width: calc(100% / 3 - 16px);
   }
 }
