@@ -69,7 +69,7 @@ for (let i = 0; i < teamMembers.length; i++) {
 }
 
 // Faccio funzione che aggiunge card
-const aggiungoCard = (p_nome, p_ruolo, p_mail) => {
+const aggiungoCard = (p_nome, p_ruolo, p_mail, p_img) => {
   // console.log(p_nome, p_ruolo, p_mail);
 
   const stringaElementoHtml = `
@@ -93,7 +93,7 @@ formElement.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Prendo array di elementi input e lo scompongo in variabili contenenti un elemento input
-  const [nome, ruolo, mail] = document.querySelectorAll("form input");
+  const [nome, ruolo, mail, img] = document.querySelectorAll("form input");
   // console.log(nome, ruolo, mail);
 
   // Metto in un oggetto questi valori in un oggetto
@@ -104,7 +104,12 @@ formElement.addEventListener("submit", (event) => {
   };
   // console.log(newCardObject);
 
-  aggiungoCard(newCardObject.Nome, newCardObject.Ruolo, newCardObject.Mail);
+  aggiungoCard(
+    newCardObject.Nome,
+    newCardObject.Ruolo,
+    newCardObject.Mail,
+    newCardObject.Img
+  );
 
   // Resetta i campi delle form
   formElement.reset();
